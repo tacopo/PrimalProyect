@@ -1,0 +1,22 @@
+@import '../styles.scss';
+@import '../fonts.scss';
+
+mat-drawer-content{
+    background: rgb(129,216,255);
+    background: linear-gradient(0deg, rgba(129,216,255,1) 40%, rgba(247,104,87,1) 100%); 
+}
+
+.mat-drawer{
+    background-color: map-get($PrimalProyect-primary,700);
+    .enlaces{
+        display: inline;
+        a {
+            text-decoration: none;
+            font-family: $font;
+            font-size: 24px;
+            color: map-get($PrimalProyect-accent , 200);
+            display: list-item;
+            padding: 15px;
+        }
+    }
+}

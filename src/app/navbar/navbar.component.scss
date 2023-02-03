@@ -1,0 +1,44 @@
+@import '../../styles.scss';
+@import '../../fonts.scss';
+
+@media screen and (min-width: 900px) {
+    nav {
+        display: flex;
+
+        button {
+            display: none;
+        }
+
+        .mat-toolbar {
+            background-color: map-get($PrimalProyect-primary, 700);
+        }
+
+        a {
+            text-decoration: none;
+            font-family: $font;
+            font-size: 24px;
+            color: map-get($PrimalProyect-accent , 200);
+            display: inline;
+            padding: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        display: flex;
+
+        button {
+            background-color: map-get($PrimalProyect-primary, 700);
+            color: map-get($PrimalProyect-accent , 200);
+        }
+
+        .mat-toolbar {
+            background-color: map-get($PrimalProyect-primary, 700);
+        }
+
+        .enlaces {
+            display: none;
+        }
+    }
+}

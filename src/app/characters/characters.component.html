@@ -1,0 +1,7 @@
+<h1>Characters</h1>
+
+<div class="grid">
+    <div *ngFor="let character of characters">
+        <app-card [name]="character.name" [type]="character.type" [img]="character.img" [desc]="character.description" [link]="character.link"></app-card>        
+    </div>
+</div>

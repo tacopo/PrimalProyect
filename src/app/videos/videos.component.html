@@ -1,0 +1,7 @@
+<h1>Clips</h1>
+
+<div class="grid">
+    <div *ngFor="let video of videos">
+        <app-video-card [clip]="video.clip" [desc]="video.description"></app-video-card>
+    </div>
+</div>

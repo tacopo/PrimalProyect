@@ -1,0 +1,26 @@
+<div class="container">
+    <img src="https://flxt.tmsimg.com/assets/p17369124_b_h9_aa.jpg">
+</div>
+<div class="container">
+    <p>Primal (Also known as Genndy Tartakovsky's Primal) is an American adult animated television series on Adult Swim
+        by Dexter's Laboratory and Samurai Jack creator Genndy Tartakovsky. The series consists of twenty half-hour
+        episodes. The first half of the series had a five-night premiere starting October 7, 2019, with the second half
+        premiering on October 4, 2020.</p>
+</div>
+<div class="container">
+    <mat-accordion>
+        <div *ngFor="let fact of facts">
+            <!-- <div *ngIf="fact.content!=null"> -->
+                <app-accordion [title]="fact.title" [content]="fact.content"></app-accordion>
+            <!-- </div>
+            <div *ngIf="fact.content==null">
+                <app-accordion [title]="fact.title"></app-accordion>
+            </div> -->
+            <!-- <ng-template #withTable>
+                    
+                </ng-template> -->
+        </div>
+    </mat-accordion>
+</div>
+
+<br>

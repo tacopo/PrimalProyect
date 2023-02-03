@@ -1,0 +1,47 @@
+@import '../../styles.scss';
+@import '../../fonts.scss';
+
+@media screen and (min-width: 900px) {
+    .container{
+        align-content: center;
+        margin: auto;
+        width: 70%;
+        img{
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        p{
+            font-family: $font;
+            font-size: 20px;
+            color: map-get($PrimalProyect-accent , 700 );
+            padding-bottom: 20px;
+        }
+        .accordion{
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .container{
+        align-content: center;
+        margin: auto;
+        width: 90%;
+        img{
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        p{
+            font-family: $font;
+            font-size: 20px;
+            color: map-get($PrimalProyect-accent , 700 );
+            padding-bottom: 20px;
+        }
+        .accordion{
+            width: 100%;
+        }
+    }
+}

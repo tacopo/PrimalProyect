@@ -1,0 +1,39 @@
+@import '../../styles.scss';
+@import '../../fonts.scss';
+
+@media screen and (min-width: 900px) {
+    h1{
+        font-family: $font;
+        color: map-get($PrimalProyect-accent , 500 );
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        div{
+            width: 70%;
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h1{
+        font-family: $font;
+        color: map-get($PrimalProyect-accent , 500 );
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: auto;
+        div{
+            width: 90%;
+            padding: 20px;
+            padding-right: 0px;
+        }
+    }
+}

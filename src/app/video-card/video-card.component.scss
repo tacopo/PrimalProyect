@@ -1,0 +1,19 @@
+@import '../../styles.scss';
+@import '../../fonts.scss';
+
+mat-card{
+    background-color: map-get($PrimalProyect-primary, 500);
+}
+
+mat-card-content{
+    p{
+        text-align: center;
+        font-family: $font;
+        font-size: 25px;
+        color: map-get($PrimalProyect-accent , 500);        
+    }
+}
+
+video{
+    width: 100%;
+}

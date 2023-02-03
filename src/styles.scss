@@ -1,1 +1,74 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+@import './fonts.scss';
+
+// Gama de colores
+
+$md-myprimarycolor: (
+    200 : #81d8ff,
+    500 : #41a7ff,
+    700 : #0079cb,
+    contrast: (
+        200 : #000000,
+        500 : #000000,
+        700 : #000000,
+    )
+);
+
+$md-mysecondarycolor: (
+    200 : #ffe771,
+    500 : #ffb540,
+    700 : #c78500,
+    contrast: (
+        200 : #000000,
+        500 : #000000,
+        700 : #000000,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $PrimalProyect-primary: mat.define-palette(mat.$indigo-palette);
+// $PrimalProyect-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// Paleta de colores
+
+$PrimalProyect-primary: mat.define-palette($md-myprimarycolor, 500, 200, 700);
+$PrimalProyect-accent: mat.define-palette($md-mysecondarycolor, 500, 200, 700);
+
+
+// The warn palette is optional (defaults to red).
+$PrimalProyect-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$PrimalProyect-theme: mat.define-light-theme((
+  color: (
+    primary: $PrimalProyect-primary,
+    accent: $PrimalProyect-accent,
+    warn: $PrimalProyect-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($PrimalProyect-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: map-get($PrimalProyect-primary,200);
+}
